@@ -31,7 +31,7 @@ Cada pasta representa um tópico que estou estudando, contendo projetos e exempl
 Se quiser explorar este repositório:
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/JVFrancaLisboa/studying.git
    ```
 2. Navegue até a pasta desejada e explore os códigos.
 
