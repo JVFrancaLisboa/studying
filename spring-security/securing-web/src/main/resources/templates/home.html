@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
-
-    <p>Click <a th:href="@{hello}">here</a> to see a greeting</p>
+<h2>Bem-vindo!</h2>
+<div sec:authorize="isAuthenticated()">
+    <p>Usuário logado: <span sec:authentication="name"></span></p>
+    <a th:href="@{/logout}">Sair</a>
+</div>
+<div sec:authorize="!isAuthenticated()">
+    <p><a th:href="@{/login}">Entrar</a></p>
+</div>
+<p><a th:href="@{/user}">Área do Usuário</a></p>
+<p><a th:href="@{/admin}">Área do Admin</a></p>
 </body>
 </html>
